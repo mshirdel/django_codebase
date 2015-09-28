@@ -1,0 +1,14 @@
+{% load staticfiles %}
+    <hr>
+    <footer>
+        <p>&copy; mshirdel@gmail.com 1394 - 2015</p>
+        {% if today_time_date %}
+            <p>Today is : {{today_time_date}}</p>
+        {% endif %}
+      </footer>
+    </div> <!-- /container -->
+    <script src="{% static 'django_codebase/js/jquery.js' %}"></script>
+    <script src="{% static 'django_codebase/js/bootstrap.js' %}"></script>
+
+</body>
+</html>

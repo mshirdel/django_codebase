@@ -1,0 +1,56 @@
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href=" {% static 'django_codebase/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href=" {% static 'django_codebase/css/bootstrap-responsive.min.css' %}" rel="stylesheet" media="screen">
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="">نام پروژه</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="">صفحه اصلی</a></li>
+                        <li><a href="">درباره ما</a></li>
+                        <li><a href="">تماس با ما</a></li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                        <ul class="nav pull-left">
+                            <li><a href="">سلام {{ user.username }}</a></li>
+                            <li><a href="{% url 'custom_auth:logout_user' %}">خروج</a></li>
+                        </ul>
+                    {% else %}
+                    <form class="navbar-form pull-left" method="get" action="{% url 'custom_auth:sign_up' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success">ثبت نام</button>
+                    </form>
+                    &nbsp;
+                    <form class="navbar-form pull-left" method="get" action="{% url 'custom_auth:sign_in' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">ورود به سیستم</button>
+                    </form>
+                    {% endif %}
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
