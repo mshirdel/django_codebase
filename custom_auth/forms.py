@@ -25,7 +25,11 @@ class SignInForm(forms.Form):
 
 
 class SignUpForm(forms.Form):
-    user_name = forms.EmailField(label='نام کاربری', max_length=30,
+    first_name = forms.CharField(label='نام', max_length=100, required=False,
+                                 widget=forms.TextInput(attrs={'class': 'input-block-level'}))
+    last_name = forms.CharField(label='نام خانوادگی', max_length=100, required=False,
+                                widget=forms.TextInput(attrs={'class': 'input-block-level'}))
+    user_name = forms.EmailField(label='نام کاربری (ایمیل)', max_length=30,
                                  widget=forms.TextInput(attrs={'class': 'input-block-level'}))
     password1 = forms.CharField(label='کلمه عبور', widget=forms.PasswordInput(attrs={'class': 'input-block-level'}))
     password2 = forms.CharField(label='تکرار کلمه عبور',

@@ -16,24 +16,17 @@ def sign_in(request):
     if request.method == 'POST':
         form = SignInForm(request.POST)
         if form.is_valid():
-            try:
-                error_msg = 'نام کاربری یا کلمه عبور اشتباه است'
-                user = authenticate(username=form.cleaned_data['user_name'], password=form.cleaned_data['password'])
-                if user is not None:
-                    if user.is_active:
-                        login(request, user)
-                        return HttpResponseRedirect(reverse('index'))
-                    else:
-                        return render(request, 'custom_auth/user_activation_request.html')
+            error_msg = 'نام کاربری یا کلمه عبور اشتباه است'
+            user = authenticate(username=form.cleaned_data['user_name'], password=form.cleaned_data['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponseRedirect(reverse('index'))
                 else:
-                    return render(request, 'custom_auth/sign_in.html',
-                                  {'form': form, 'error_msg': error_msg})
-            except IntegrityError:
-                error_msg = 'این نام کاربری قبلا در سیستم ثبت شده است'
+                    return render(request, 'custom_auth/user_activation_request.html')
+            else:
                 return render(request, 'custom_auth/sign_in.html',
                               {'form': form, 'error_msg': error_msg})
-                pass
-
         else:
             error_msg = 'لطفا نام کاربری و کلمه عبور را وارد کنید'
             form = SignInForm()
@@ -48,21 +41,27 @@ def sign_up(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            pass2 = form.cleaned_data['password2']
-            pass1 = form.cleaned_data['password1']
-            user_name = form.cleaned_data['user_name']
-            if pass1 == pass2:
-                new_user = User.objects.create_user(username=user_name, email=user_name,
-                                                    password=pass1)
-                new_user.is_active = False
-                new_user.save()
+            try:
+
+                pass2 = form.cleaned_data['password2']
+                pass1 = form.cleaned_data['password1']
+                user_name = form.cleaned_data['user_name']
+                if pass1 == pass2:
+                    new_user = User.objects.create_user(username=user_name, email=user_name,
+                                                        password=pass1)
+                    new_user.is_active = False
+                    new_user.save()
+                    return render(request, 'custom_auth/sign_up.html',
+                                  {'form': form,
+                                   'success_msg': 'حساب کاربری شما ایجاد شد. برای فعال سازی ایمیل خود را چک کنید'})
+                else:
+                    return render(request, 'custom_auth/sign_up.html',
+                                  {'form': form,
+                                   'error_msg': 'کلمه های عبور وارد شده با هم برابر نمی باشند'})
+            except IntegrityError:
                 return render(request, 'custom_auth/sign_up.html',
                               {'form': form,
-                               'success_msg': 'حساب کاربری شما ایجاد شد. برای فعال سازی ایمیل خود را چک کنید'})
-            else:
-                return render(request, 'custom_auth/sign_up.html',
-                              {'form': form,
-                               'error_msg': 'کلمه های عبور وارد شده با هم برابر نمی باشند'})
+                               'error_msg': 'این نام کاربری قبلا ثبت شده است'})
 
         else:
             return render(request, 'custom_auth/sign_up.html',

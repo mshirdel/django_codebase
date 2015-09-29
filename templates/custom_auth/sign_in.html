@@ -1,12 +1,20 @@
 {% include 'django_codebase/page_head.html' %}
-{% if error_msg %}
-        <div class="alert alert-error">{{ error_msg }}</div>
-    {% endif %}
-<form method="post" action="{% url 'custom_auth:sign_in' %}">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="ورود" class="btn btn-primary">
-    <div>عضو نیستید؟</div>
-    <a href="{% url 'custom_auth:sign_up' %}">ثبت نام کنید</a>
-</form>
+<div class="row">
+    <div class="span4"></div>
+    <div class="span4">
+        {% if error_msg %}
+            <div class="alert alert-error">{{ error_msg }}</div>
+        {% endif %}
+        <form method="post" action="{% url 'custom_auth:sign_in' %}">
+            <legend>ورود به سیستم</legend>
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="ورود" class="btn btn-primary btn-block">
+            <div>عضو نیستید؟</div>
+            <a href="{% url 'custom_auth:sign_up' %}">ثبت نام کنید</a>
+        </form>
+    </div>
+    <div class="span4"></div>
+</div>
+
 {% include 'django_codebase/page_end.html' %}
