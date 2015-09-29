@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -38,7 +39,7 @@ class UserPhone(models.Model):
 
 
 class ContactUs(models.Model):
-    email = models.EmailField()
-    name = models.CharField(max_length=200, null=True)
-    comment = models.TextField()
+    email = models.EmailField(verbose_name='ایمیل')
+    name = models.CharField(max_length=200, blank=True, verbose_name='نام')
+    comment = models.TextField(verbose_name='متن پیام')
     ip = models.GenericIPAddressField()

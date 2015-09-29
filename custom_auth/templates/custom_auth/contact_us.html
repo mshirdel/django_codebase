@@ -1,0 +1,16 @@
+{% if success_msg %}
+    <div class="alert alert-error">{{ success_msg }}</div>
+    <form method="get" action="{% url 'index' %}">
+        {% csrf_token %}
+        <input type="submit" value="ادامه" class="btn btn-primary">
+    </form>
+{% else %}
+    {% if error_msg %}
+        <div class="alert alert-error">{{ error_msg }}</div>
+    {% endif %}
+    <form method="post" action="{% url 'custom_auth:contact_us' %}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="ثبت" class="btn btn-primary">
+    </form>
+{% endif %}

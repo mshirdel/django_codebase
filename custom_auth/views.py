@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 from django.core.urlresolvers import reverse
 from django.db import IntegrityError
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.views.generic import View
-from custom_auth.forms import SignInForm, SignUpForm
+from custom_auth.forms import SignInForm, SignUpForm, ContactUsForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-
+from custom_auth.models import ContactUs
+from my_utils import http
 
 # Create your views here.
 
@@ -75,3 +76,25 @@ def sign_up(request):
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
+
+
+def contact_us(request):
+    if request.method == 'POST':
+        contact = ContactUs(ip=http.get_client_ip(request))
+        form = ContactUsForm(request.POST, instance=contact)
+        if form.is_valid():
+            form.save()
+            return render(request, 'custom_auth/contact_us.html',
+                          {
+                              'form': form,
+                              'success_msg': 'پیام شما در سیستم ثیت شد'
+                          })
+        else:
+            return render(request, 'custom_auth/contact_us.html',
+                          {
+                              'form': form,
+                              'error_msg': 'لطفا فیلدهای الزامی را پر کنید'
+                          })
+    else:
+        form = ContactUsForm
+    return render(request, 'custom_auth/contact_us.html', {'form': form})

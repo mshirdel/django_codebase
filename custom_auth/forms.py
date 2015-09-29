@@ -2,7 +2,7 @@
 from django import forms
 from django.forms import ModelForm
 from captcha.fields import CaptchaField
-from .models import UserProfile
+from .models import UserProfile, ContactUs
 
 
 class ContactUsForm(forms.Form):
@@ -40,3 +40,14 @@ class UserProfileForm(ModelForm):
     class Meta:
         model = UserProfile
         fields = ['user', 'address', 'gender', 'marital_status', 'birth_day']
+
+
+class ContactUsForm(ModelForm):
+    class Meta:
+        model = ContactUs
+        fields = ['email', 'name', 'comment']
+        widgets = {
+            'email': forms.TextInput(attrs={'class': 'input-block-level'}),
+            'name': forms.TextInput(attrs={'class': 'input-block-level'}),
+            'comment': forms.Textarea(attrs={'class': 'input-block-level'})
+        }
