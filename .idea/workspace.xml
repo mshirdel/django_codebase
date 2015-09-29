@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce65856f-6ec6-4c14-9b79-2f4e88b62832" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_utils/http.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom_auth/forms.py" afterPath="$PROJECT_DIR$/custom_auth/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom_auth/models.py" afterPath="$PROJECT_DIR$/custom_auth/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_codebase/templates/django_codebase/page_head.html" afterPath="$PROJECT_DIR$/django_codebase/templates/django_codebase/page_head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom_auth/urls.py" afterPath="$PROJECT_DIR$/custom_auth/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom_auth/views.py" afterPath="$PROJECT_DIR$/custom_auth/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/custom_auth/contact_us.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html" afterPath="$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="django_codebase.iws" />
@@ -31,22 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/custom_auth/models.py">
+      <file leaf-file-name="contact_us.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/custom_auth/contact_us.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
-              <folding>
-                <element signature="e#24#52#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-3.3333333">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_auth/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30658105">
+            <state vertical-scroll-proportion="0.0">
               <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
               <folding>
                 <element signature="e#24#68#0" expanded="true" />
@@ -55,55 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="http.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_utils/http.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/custom_auth/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_head.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_codebase/templates/django_codebase/page_head.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5555553">
-              <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/custom_auth/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="75" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
-              <folding>
-                <element signature="e#24#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact_us.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contact_us.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3333333">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.030201342">
+              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign_in.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/custom_auth/sign_in.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.3333335">
+              <caret line="11" column="78" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -136,11 +94,12 @@
         <option value="$PROJECT_DIR$/templates/custom_auth/sign_in.html" />
         <option value="$PROJECT_DIR$/custom_auth/urls.py" />
         <option value="$PROJECT_DIR$/django_codebase/templates/django_codebase/page_head.html" />
-        <option value="$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html" />
         <option value="$PROJECT_DIR$/custom_auth/models.py" />
         <option value="$PROJECT_DIR$/custom_auth/forms.py" />
         <option value="$PROJECT_DIR$/my_utils/http.py" />
         <option value="$PROJECT_DIR$/custom_auth/views.py" />
+        <option value="$PROJECT_DIR$/templates/custom_auth/contact_us.html" />
+        <option value="$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html" />
       </list>
     </option>
   </component>
@@ -205,7 +164,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="my_utils" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom_auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_codebase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_codebase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom_auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_codebase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_codebase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom_auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom_auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -218,6 +217,11 @@
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/custom_auth" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.django_codebase">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -526,14 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/custom_auth/sign_in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3333335">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_codebase/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14446227">
@@ -562,7 +558,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/custom_auth/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.20224719">
           <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -572,7 +568,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_codebase/templates/django_codebase/page_head.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5555553">
+        <state vertical-scroll-proportion="0.29697987">
           <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
           <folding />
         </state>
@@ -594,14 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/custom_auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -614,7 +602,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/custom_auth/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.76886034">
           <caret line="51" column="75" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
           <folding>
             <element signature="e#24#48#0" expanded="true" />
@@ -624,19 +612,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my_utils/http.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.20224719">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/custom_auth/sign_in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="11" column="78" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/custom_auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30658105">
+        <state vertical-scroll-proportion="0.0">
           <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
           <folding>
             <element signature="e#24#68#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/custom_auth/contact_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom_auth/templates/custom_auth/contact_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030201342">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

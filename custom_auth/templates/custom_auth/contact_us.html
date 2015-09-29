@@ -1,5 +1,5 @@
 {% if success_msg %}
-    <div class="alert alert-error">{{ success_msg }}</div>
+    <div class="alert alert-success">{{ success_msg }}</div>
     <form method="get" action="{% url 'index' %}">
         {% csrf_token %}
         <input type="submit" value="ادامه" class="btn btn-primary">
