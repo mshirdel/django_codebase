@@ -39,12 +39,12 @@
                             <li><a href="{% url 'custom_auth:logout_user' %}">خروج</a></li>
                         </ul>
                     {% else %}
-                    <form class="navbar-form pull-left" method="get" action="{% url 'custom_auth:sign_up' %}">
+                    <form class="navbar-form pull-left" method="post" action="{% url 'custom_auth:sign_up' %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-success">ثبت نام</button>
                     </form>
                     &nbsp;
-                    <form class="navbar-form pull-left" method="get" action="{% url 'custom_auth:sign_in' %}">
+                    <form class="navbar-form pull-left" method="post" action="{% url 'custom_auth:sign_in' %}">
                         {% csrf_token %}
                         <button type="submit" class="btn">ورود به سیستم</button>
                     </form>
