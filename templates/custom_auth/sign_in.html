@@ -9,6 +9,9 @@
             <legend>ورود به سیستم</legend>
             {% csrf_token %}
             {{ form }}
+            {% if next_page %}
+                <input type="hidden" name="next_page" value="{{ next_page }}">
+            {% endif %}
             <input type="submit" value="ورود" class="btn btn-primary btn-block">
             <div>عضو نیستید؟</div>
             <a href="{% url 'custom_auth:sign_up' %}">ثبت نام کنید</a>

@@ -35,7 +35,7 @@
                     </ul>
                     {% if user.is_authenticated %}
                         <ul class="nav pull-left">
-                            <li><a href="">سلام {{ user.username }}</a></li>
+                            <li><a href="{% url 'custom_auth:user_profile' %}">سلام {{ user.username }}</a></li>
                             <li><a href="{% url 'custom_auth:logout_user' %}">خروج</a></li>
                         </ul>
                     {% else %}

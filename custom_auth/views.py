@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
+from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import View
 from custom_auth.forms import SignInForm, SignUpForm, ContactUsForm
 from django.contrib.auth.models import User
@@ -11,9 +12,12 @@ from custom_auth.models import ContactUs
 from my_utils import http
 
 # Create your views here.
+from my_utils.http import my_login_required
 
 
 def sign_in(request):
+    if request.method == 'GET':
+        next_page = request.GET['next']
     if request.method == 'POST':
         form = SignInForm(request.POST)
         if form.is_valid():
@@ -22,7 +26,10 @@ def sign_in(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponseRedirect(reverse('index'))
+                    if request.POST['next_page']:
+                        return HttpResponseRedirect(request.POST['next_page'])
+                    else:
+                        return HttpResponseRedirect(reverse('index'))
                 else:
                     return render(request, 'custom_auth/user_activation_request.html')
             else:
@@ -32,10 +39,16 @@ def sign_in(request):
             error_msg = 'لطفا نام کاربری و کلمه عبور را وارد کنید'
             form = SignInForm()
             return render(request, 'custom_auth/sign_in.html',
-                          {'form': form, 'error_msg': error_msg})
+                          {'form': form,
+                           'error_msg': error_msg,
+                           'next_page': '/'
+                           })
     else:
         form = SignInForm()
-        return render(request, 'custom_auth/sign_in.html', {'form': form})
+        return render(request, 'custom_auth/sign_in.html', {
+            'form': form,
+            'next_page': next_page
+        })
 
 
 def sign_up(request):
@@ -98,3 +111,8 @@ def contact_us(request):
     else:
         form = ContactUsForm
     return render(request, 'custom_auth/contact_us.html', {'form': form})
+
+
+@login_required
+def user_profile(request):
+    return HttpResponse("user profile")

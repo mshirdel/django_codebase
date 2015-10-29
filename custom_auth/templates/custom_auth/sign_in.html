@@ -1,9 +1,13 @@
 {% if error_msg %}
         <div class="alert alert-error">{{ error_msg }}</div>
-    {% endif %}
+{% endif %}
+
 <form method="post" action="{% url 'custom_auth:sign_in' %}">
     {% csrf_token %}
     {{ form }}
+    {% if next_page %}
+        <input type="hidden" name="next_page" value="{{ next_page }}">
+    {% endif %}
     <input type="submit" value="ورود" class="btn btn-primary">
     <div>عضو نیستید؟</div>
     <a href="{% url 'custom_auth:sign_up' %}">ثبت نام کنید</a>

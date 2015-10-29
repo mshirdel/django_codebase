@@ -47,3 +47,11 @@ class ContactUsForm(ModelForm):
             'name': forms.TextInput(attrs={'class': 'input-block-level'}),
             'comment': forms.Textarea(attrs={'class': 'input-block-level'})
         }
+        error_messages = {
+            'email': {
+                'required': 'لطفا ایمیل معتبری وارد کنید'
+            },
+            'comment': {
+                'required': 'متن پیام مورد نظر را وارد کنید'
+            }
+        }
